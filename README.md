@@ -24,12 +24,14 @@ Installing the Library
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'textkey_rest'
+gem 'textkey_rest', '~> 1.0.0'
 ```
 
 Or install it from the command line:
 
     $ gem install textkey_rest
+    
+For more information go to [http://rubygems.org/](https://rubygems.org/gems/textkey_rest)
 
 Building the textkey_rest GEM
 -----------------------------
@@ -45,7 +47,7 @@ Then you can install it yourself locally:
 How to use it?
 --------------
 
-The simple use case is to create a textkey object, call the appropriate API method and handle the returned object payload. The class will handle the details between the request and response and will return an object to work with.
+The simple use case is to create a textkey object, call the appropriate API method and handle the returned JSON payload. The class will handle the details between the request and response and will return an object to work with.
 
 For example, here is a use case to check if a user has already been registered using the `doesRegistrationUserIDExist` API Call.
 
@@ -127,7 +129,15 @@ NOTE: If there is an error, the `errorDescr` field of the returned JSON payload 
 Sample/Test Code
 ----------------
 
-There is sample/test code in the [test Folder](https://github.com/TEXTPOWER/RESTLibrary-ruby/tree/master/test) for each TextKey API call using the shared library. Just set your API Key in the configuration.rb file in the test folder. To run all of the tests, run TestAll.rb.
+There is sample/test code in the [test Folder](https://github.com/TEXTPOWER/RESTLibrary-ruby/tree/master/test) for each TextKey API call using the shared library. 
+
+To try out the test code, just set your API Key in the [configuration.rb](https://github.com/TEXTPOWER/RESTLibrary-ruby/blob/master/test/configuration.rb) file in the test folder and then you should be able to either run each test individually. For example:
+
+    $ ruby test_GetTempAPIKey.rb
+
+Or if you want to run all of the tests at once:
+
+    $ ruby TestAll.rb
 
 Contributing to this SDK
 ------------------------
